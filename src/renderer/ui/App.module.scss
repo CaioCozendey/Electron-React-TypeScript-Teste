@@ -8,13 +8,17 @@
   }
 }
 
+body{
+  background-color: #303846;
+}
+
 .app {
   padding: 3rem;
   width: 100vw;
   height: 50vh;
   color: white;
-  background-color: #303846;
   text-align: center;
+  margin-bottom: 1rem;
 
   img {
     width: 8rem;
@@ -24,28 +28,52 @@
   h1 {
     margin: 0;
   }
+
 }
 
 .container{
   background-color: #303846;
   text-align: center;
   color: white;
+  width: 45rem;
   height: 50vh;
-  flex-flow: column;
   display: flex;
+  margin: 0 auto;
 
   input{
     width: 40rem;
     height: 2rem;
-    align-self: center;
     margin: 1rem;
     text-align: center;
   }
+  .addBtn{
+    padding: 1rem;
+    width: 10rem;
+    height: 3.5rem;
+    margin: 1rem;
+    align-self: center;
+    background-color: #e3e3e3;
+    cursor: pointer;
+  }
+
+  .btn{
+    padding: 1rem;
+    width: 10rem;
+    height: 3.4rem;
+    margin: 1rem;
+    align-self: center;
+    background-color: #e3e3e3;
+    color: #000000;
+    text-decoration: none;
+    font-family: Arial, serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .btn:hover{
+    background-color: #6e6e6e;
+    color: white;
+  }
 }
 
-.addBtn{
-  padding: 1rem;
-  width: 10rem;
-  margin: 1rem;
-  align-self: center;
-}
