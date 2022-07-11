@@ -9,9 +9,9 @@
 }
 
 .app {
-  padding: 3rem 10rem;
+  padding: 3rem;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   color: white;
   background-color: #303846;
   text-align: center;
@@ -24,4 +24,28 @@
   h1 {
     margin: 0;
   }
+}
+
+.container{
+  background-color: #303846;
+  text-align: center;
+  color: white;
+  height: 50vh;
+  flex-flow: column;
+  display: flex;
+
+  input{
+    width: 40rem;
+    height: 2rem;
+    align-self: center;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+.addBtn{
+  padding: 1rem;
+  width: 10rem;
+  margin: 1rem;
+  align-self: center;
 }

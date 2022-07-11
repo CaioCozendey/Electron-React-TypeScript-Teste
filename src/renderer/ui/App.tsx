@@ -12,15 +12,26 @@ export const App: React.FC = () => {
     setTimeout(() => setDate(getDate()), 1000)
   }, [date, setDate])
 
-  return (
-    <div className={styles.app}>
-      <img
-        src={logo}
-        alt="React logo"
-      />
-      <h1>Electron React Typescript</h1>
-      <p>Code changes will reload the app automatically.</p>
-      <pre>{date}</pre>
-    </div>
+    function adiciona() {
+        return undefined;
+    }
+
+    return (
+      <>
+          <div className={styles.app}>
+              <img
+                  src={logo}
+                  alt="React logo"/>
+              <h1> Teste High Jump - Electron React TS</h1>
+              <p> Código Criado por Caio Dias</p>
+              <pre>{date}</pre>
+          </div>
+          <div className={styles.container}>
+              Tarefa <input type={"text"} />
+              Descrição <input type={"text"} />
+              <button className={styles.addBtn} type={"submit"} onClick={adiciona()}> Adicionar </button>
+              <button className={styles.addBtn}> Lista de Tarefas </button>
+          </div>
+      </>
   )
 }
