@@ -16,12 +16,12 @@ export const App: React.FC = () => {
     const nomeTarefa = document.querySelector("#nomeTarefa");
     const descrTarefa = document.querySelector("#descricaoTarefa");
     //const btnAdicionar = document.querySelector("#btnAdicionar")
-    const formTarefa = document.querySelector("#formTarefas")
+    const formTarefa = document.querySelector("#formTarefas");
 
-    formTarefa.addEventListener('submit', e =>{
+    formTarefa?.addEventListener("submit", async (e) => {
         e.preventDefault();
-        console.log("Opa")
-    })
+        alert("Opa");
+    });
 
     return (
         <>
