@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { getDate } from "../../common/getDate"
 
+
 import styles from "./App.module.scss"
 import logo from "../public/logo192.png"
 
@@ -13,14 +14,16 @@ export const App: React.FC = () => {
     }, [date, setDate])
 
 
-    const nomeTarefa = document.querySelector("#nomeTarefa");
-    const descrTarefa = document.querySelector("#descricaoTarefa");
+
+    const nomeTarefa = document.querySelector("#nomeTarefa") as HTMLInputElement;
+    const descrTarefa = document.querySelector("#descricaoTarefa") as HTMLInputElement;
     //const btnAdicionar = document.querySelector("#btnAdicionar")
     const formTarefa = document.querySelector("#formTarefas");
 
-    formTarefa?.addEventListener("submit", async (e) => {
+    formTarefa?.addEventListener("submit", e => {
         e.preventDefault();
-        alert("Opa");
+        alert((nomeTarefa.value, descrTarefa.value));
+
     });
 
     return (
