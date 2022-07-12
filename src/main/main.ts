@@ -3,6 +3,10 @@ import isDev from "electron-is-dev"
 import path from "path"
 import url from "url"
 
+const Tarefa = require('../renderer/model/tarefa')
+
+const { ipcMain } = require('electron')
+
 const productionUrl = path.resolve(__dirname, "../renderer/index.html")
 
 const appUrl = isDev
@@ -26,5 +30,11 @@ async function run() {
   await mainWindow.loadURL(appUrl)
   mainWindow.show()
 }
+
+ipcMain.on('Nova Tarefa', (e, args) =>{
+    const novaTarefa = new Tarefa(args)
+    const tarefaSalva = novaTarefa.save()
+    e.reply('Nova Tarefa criada', tarefaSalva)
+})
 
 app.whenReady().then(run)

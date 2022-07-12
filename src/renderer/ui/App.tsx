@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { getDate } from "../../common/getDate"
 
+const { ipcRedenrer } = require('electron')
 
 import styles from "./App.module.scss"
 import logo from "../public/logo192.png"
@@ -22,9 +23,17 @@ export const App: React.FC = () => {
 
     formTarefa?.addEventListener("submit", e => {
         e.preventDefault();
-        alert((nomeTarefa.value, descrTarefa.value));
 
+        const tarefa = {
+            nome: nomeTarefa.value,
+            descricao: descrTarefa.value
+        }
+        ipcRedenrer.send('Nova Tarefa', tarefa )
     });
+
+    ipcRedenrer.on("Nova Tarefa criada", (e, args) => {
+
+    })
 
     return (
         <>
