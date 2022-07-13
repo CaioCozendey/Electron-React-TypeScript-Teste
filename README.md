@@ -1,9 +1,13 @@
 # electron-react-typescript
-Clone this repo to start a simple Electron app with React and Typescript.
+Código realizato para teste de Estágio na High Jump.
 
-## Installation
+## Observações
 
-Use yarn to install all dependencies.
+Use Yarn para instalr todas as dependências
+
+O código apresenta falhas que eu não consegui resolver até o presente momento
+
+Código realizado através de pesquisa nas ferramentas: React, Electron, MongoDB, utilizando a linguagem Typescript
 
 ```bash
 yarn
@@ -11,7 +15,7 @@ yarn
 
 ## Usage
 
-Run the `dev` script to start the project. It will reload with code changes.
+Use o comando `Dev` para executar o código
 
 ```bash
 yarn dev
