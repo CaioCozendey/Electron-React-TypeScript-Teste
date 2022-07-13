@@ -31,10 +31,20 @@ async function run() {
   mainWindow.show()
 }
 
-ipcMain.on('Nova Tarefa', (e, args) =>{
+ipcMain.on('Nova Tarefa', async (e, args) =>{
     const novaTarefa = new Tarefa(args)
-    const tarefaSalva = novaTarefa.save()
-    e.reply('Nova Tarefa criada', tarefaSalva)
+    const tarefaSalva = await novaTarefa.save()
+    e.reply('Nova-Tarefa-criada', JSON.stringify(tarefaSalva))
+})
+
+ipcMain.on('pega-tarefas', async (e, args) =>{
+    const tarefa = await Tarefa.find();
+    e.reply('pega-tarefas', JSON.stringify(tarefa));
+})
+
+ipcMain.on('deletar-tarefa', async  (e, args) => {
+    const tarefaDeletada = await Tarefa.findByIdAndDelete(args)
+    e.reply('tarefa-deletada-com-sucesso', JSON.stringify(tarefaDeletada));
 })
 
 app.whenReady().then(run)
