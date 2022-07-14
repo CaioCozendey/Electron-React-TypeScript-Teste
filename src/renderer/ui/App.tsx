@@ -27,12 +27,11 @@ export const App: React.FC = () => {
         containerTarefas.innerHTML = '';
         tarefa.map(t => {
             containerTarefas.innerHTML += ' ' +
-                ' <div>' +
+                ' <div>' 
                     '<h2> ID Tarefa ${t.nome}</h2>'+
                     '<p> Nome: ${t.nome} </p>' +
-                    '<p> Descrição: ${t.descricao}</p>' +
+                    '<p> Descrição da Tarefa: ${t.descricao}</p>' +
                     ' <button onClick={ "apagarTarefa()" }> Apagar </button>'+
-                    ' <button> Editar </button>'+
                  '</div>'
         })
     }

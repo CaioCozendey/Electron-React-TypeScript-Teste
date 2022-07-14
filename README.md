@@ -3,11 +3,11 @@ Código realizato para teste de Estágio na High Jump.
 
 ## Observações
 
-Use Yarn para instalr todas as dependências
+Use Yarn para instalar todas as dependências
 
-O código apresenta falhas que eu não consegui resolver até o presente momento
+O código apresenta falhas que eu não consegui resolver até o presente momento e infelizmente não está executando
 
-Código realizado através de pesquisa nas ferramentas: React, Electron, MongoDB, utilizando a linguagem Typescript
+Código realizado com as ferramentas React, Electron, MongoDB, utilizando a linguagem Typescript
 
 ```bash
 yarn
